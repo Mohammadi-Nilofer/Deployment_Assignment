@@ -19,12 +19,8 @@ with open('catboost_regressor.pkl', 'rb') as f:
 st.title("Car Price Prediction Web App")
 st.write("🔍 This app uses a Catboost Regressor model to predict Car Price.")
 
-brand = st.sidebar.selectbox('Brand', options= {0: 'Audi', 1 : 'BMW' , 2 : 'Chevrolet',3: 'Ford',4: 'Honda',5: 'Hyundai',6: 'Kia',7: 'Mercedes',8: 'Toyota',9: 'Volkswagen'})
-model_name = st.sidebar.selectbox('Model', options={0:'Rio',1: 'Malibu',2: 'GLA',3: 'Q5',4: 'Golf',5: 'Camry',6: 'Civic',7: 'Sportage',
-       8:'RAV4',9: '5 Series',10: 'CR-V',11: 'Elantra',12 : 'Tiguan',13: 'Equinox',
-       14:'Explorer',15: 'A3',16: '3 Series',17: 'Tucson',18: 'Passat',19: 'Impala',
-       20:'Corolla',21: 'Optima',22: 'Fiesta',23: 'A4',24: 'Focus',25: 'E-Class',26: 'Sonata',
-       27:'C-Class',28: 'X5',29: 'Accord'})
+brand = st.sidebar.text_input('Brand', '')
+model_name = st.sidebar.text_input('Model', '')
 year = st.sidebar.number_input('Year', min_value=2001, max_value=2025, value=2020)
 engine_size = st.sidebar.number_input('Engine Size', min_value=0.5, max_value=5.0, step=0.1, value=2.0)
 fuel_type = st.sidebar.selectbox('Fuel Type', options ={0: 'Diesel',1 : 'Hybrid', 2 : 'Electric', 3 : 'Petrol'})
