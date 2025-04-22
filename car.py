@@ -43,7 +43,7 @@ if st.button("Predict Car Price"):
 	    owner_count
     ]])
 
-	  #Prediction
-	  prediction = model.predict(input_data)
+    #Prediction
+    prediction = model.predict(input_data)
     predicted_price = round(prediction[0], 2)
     st.subheader(f'Predicted Car Price: ${predicted_price}')
